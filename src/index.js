@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./input.css";
 import { GitCommitHistoryApp } from "./GitCommitHistoryApp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
