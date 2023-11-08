@@ -28,7 +28,7 @@ export const GitCommitHistoryApp = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:4000/github/commits/${username}/${repository}`
+        `https://api.github.com/repos/${username}/${repository}/commits`
       );
 
       if (response.ok) {
