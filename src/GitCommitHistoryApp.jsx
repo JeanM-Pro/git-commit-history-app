@@ -24,7 +24,7 @@ export const GitCommitHistoryApp = () => {
 
     if (username === "" || repository === "") {
       setIsSearching(false);
-      return toast.error("Debes llenar los campos vacios");
+      return toast.error("You must fill in the empty fields");
     }
     try {
       const response = await fetch(
@@ -35,12 +35,12 @@ export const GitCommitHistoryApp = () => {
         const data = await response.json();
         setCommits(data);
         setIsSearching(false);
-        toast.success("Historial de commits cargado");
+        toast.success("Uploaded commit history");
         console.log(data.private);
       } else {
         setIsSearching(false);
         toast.error(
-          "No se pudo obtener el historial de commits. Recuerde que solo puede ingresar un repositorio publico"
+          "Could not get commit history. Remember that you can only enter a public repository"
         );
         throw new Error("No se pudo obtener el historial de commits.");
       }
@@ -93,7 +93,7 @@ export const GitCommitHistoryApp = () => {
             {isSearching ? (
               <MoonLoader size={20} color="#000000" />
             ) : (
-              <span className="font-semibold">Obtener Commits</span>
+              <span className="font-semibold">Get Commits</span>
             )}
           </button>
         </div>

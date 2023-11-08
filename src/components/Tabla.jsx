@@ -45,7 +45,7 @@ export const Tabla = ({ datos }) => {
           ) : (
             <tr>
               <td colSpan="8" className=" border border-black">
-                No hay datos disponibles.
+                No data available.
               </td>
             </tr>
           )}
